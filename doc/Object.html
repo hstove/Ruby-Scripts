@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Class: Object</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>play.rb
+    <li>roll.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">BasicObject
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-get_grade">#get_grade</a>
+    
+    <li><a href="#method-i-play">#play</a>
+    
+    <li><a href="#method-i-roll_first">#roll_first</a>
+    
+    <li><a href="#method-i-roll_second">#roll_second</a>
+    
+    <li><a href="#method-i-start">#start</a>
+    
+    <li><a href="#method-i-winner">#winner</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./basic.html">basic</a>
+  
+    <li class="file"><a href="./fun/README.html">README</a>
+  
+    <li class="file"><a href="./heynk.html">heynk</a>
+  
+    <li class="file"><a href="./roll.html">roll</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Object</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-get_grade" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_grade</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_grade-source">
+            <pre><span class="ruby-comment"># File play.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_grade</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">'Enter your grade out of 100'</span>
+        <span class="ruby-identifier">grades</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">grades</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">88</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">90</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">95</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">100</span> <span class="ruby-comment">#initial grades</span>
+        <span class="ruby-identifier">grade</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">to_f</span>
+        <span class="ruby-identifier">grades</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">grade</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">grades</span>.<span class="ruby-identifier">inject</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">el</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">el</span> }.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">grades</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">'Your average is '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">'scores: '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">grades</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">get_grade</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_grade-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_grade-method -->
+
+    
+      <div id="method-i-play" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">play</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="play-source">
+            <pre><span class="ruby-comment"># File roll.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">play</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">'Enter name 1:'</span>
+        <span class="ruby-identifier">name1</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">capitalize</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">'Enter name 2:'</span>
+        <span class="ruby-identifier">name2</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">capitalize</span>
+        <span class="ruby-identifier">roll_first</span>(<span class="ruby-identifier">name1</span>)
+        <span class="ruby-identifier">roll_second</span>(<span class="ruby-identifier">name2</span>)
+        <span class="ruby-identifier">winner</span>(<span class="ruby-identifier">name1</span>, <span class="ruby-identifier">name2</span>)
+        <span class="ruby-identifier">again</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">again</span> <span class="ruby-operator">==</span> <span class="ruby-string">'y'</span>
+                <span class="ruby-identifier">play</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">'Bye!'</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- play-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- play-method -->
+
+    
+      <div id="method-i-roll_first" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">roll_first</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="roll_first-source">
+            <pre><span class="ruby-comment"># File roll.rb, line 1</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">roll_first</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-identifier">d1</span> = (<span class="ruby-identifier">rand</span>*<span class="ruby-value">6</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">d2</span> = (<span class="ruby-identifier">rand</span>*<span class="ruby-value">6</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">$r1</span> = <span class="ruby-identifier">d1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d2</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Hello #{name} here is your roll.&quot;</span>
+        <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[#{d1},#{d2}]&quot;</span>
+        <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- roll_first-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- roll_first-method -->
+
+    
+      <div id="method-i-roll_second" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">roll_second</span><span
+            class="method-args">(name2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="roll_second-source">
+            <pre><span class="ruby-comment"># File roll.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">roll_second</span>(<span class="ruby-identifier">name2</span>)
+        <span class="ruby-identifier">d3</span> = (<span class="ruby-identifier">rand</span>*<span class="ruby-value">6</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">d4</span> = (<span class="ruby-identifier">rand</span>*<span class="ruby-value">6</span>).<span class="ruby-identifier">ceil</span>
+        <span class="ruby-identifier">$r2</span> = <span class="ruby-identifier">d3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d4</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Hello #{name2} here is your roll.&quot;</span>
+        <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[#{d3},#{d4}]&quot;</span>
+        <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- roll_second-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- roll_second-method -->
+
+    
+      <div id="method-i-start" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">start</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="start-source">
+            <pre><span class="ruby-comment"># File play.rb, line 1</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Do you want to enter a new grade? (Y/N)&quot;</span>
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">==</span> <span class="ruby-string">'y'</span>
+                <span class="ruby-identifier">get_grade</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">'have a good day, fuck.'</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- start-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- start-method -->
+
+    
+      <div id="method-i-winner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">winner</span><span
+            class="method-args">(name1, name2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="winner-source">
+            <pre><span class="ruby-comment"># File roll.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">winner</span>(<span class="ruby-identifier">name1</span>, <span class="ruby-identifier">name2</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">$r1</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">$r2</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">name1</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, you are the winner! Play again?&quot;</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$r2</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">$r1</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">name2</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, you are the winner! Play again?&quot;</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">$r2</span> = <span class="ruby-identifier">$r1</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">'Tie game. Play again?'</span>
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">'error'</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- winner-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- winner-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

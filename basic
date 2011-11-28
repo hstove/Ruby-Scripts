@@ -1,0 +1,12 @@
+require "mysql"
+
+begin
+	dbh = Mysql.real_connect('shopobot-07-26-ii.c76e00wattt7.us-east-1.rds.amazonaws.com','shopobot_ro',"2Jfixq9U","shopobot")
+	puts "server version: " + dbh.get_server_info
+rescue Mysql:: Error => e
+	puts "error code: #{e.errno}"
+	puts "error message: #{e.error}"
+	puts "error SQLSTATE: #{e.sqlstate}" if e.respond_to?("sqlstate")
+ensure
+	dbh.close if dbh
+end

@@ -1,0 +1,6 @@
+"--------------"
+"selec"," * from shopobo",".produc"," where produc","_id = 1"
+"--------------"
+""
+"produc","_id	crawled	rank	locked_for_crawl	","i","le	crea","or	added	display_","i","le	lowes","_new	lowes","_used	lowes","_refurb	dealiness_new	dealiness_used	dealiness_refurb	migra","ed_up_","o"
+"1	2011-10-18 10:14:22	1068	NULL	iPod Classic 5	Apple	2011-09-29 23:07:31	Apple iPod Classic 5 Whi","e 30GB	199.95	30	104.99	1.74052665440775	3.59950086351922	0.0768141606009948	2011-09-29 15:32:18"
