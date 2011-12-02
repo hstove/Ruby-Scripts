@@ -1,0 +1,15 @@
+This is the Google Chrome extension for adding a product with our internal API. 
+
+To install-
+
+-clone this repo
+-in Chrome go to the extensions page, turn on developer mode, and hit 'load unpackaged extension…' and choose this folder.
+-Go to an amazon page and hit the icon.
+
+to do-
+
+-make sure the form works, I have done nothing really with this so far (new version needs to be up)
+-handle the form response, right now it opens up in the popup, but there is chrome API to open in a new tab
+-make prettier
+
+outsiders - this will only work if you have an admin cookie 
