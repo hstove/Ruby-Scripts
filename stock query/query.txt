@@ -1,0 +1,2 @@
+stocks = ['AAPL']
+format = ['k1']

@@ -1,0 +1,694 @@
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in cc6Mmjfx.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccKvz6UA.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.      -lruby.1.9.1-static -lmysqlclient  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in cciXH8AU.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lm... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.      -lruby.1.9.1-static -lm  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccas0yj5.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccmnlYc8.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lm  -lruby.1.9.1-static -lmysqlclient -lm  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccCkbPLV.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lz... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lm  -lruby.1.9.1-static -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in cclktgeI.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccJztC8U.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccDHxhm3.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lsocket... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lsocket -lz -lm  -lpthread -ldl -lobjc "
+ld: library not found for -lsocket
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lsocket -lz -lm  -lpthread -ldl -lobjc "
+ld: library not found for -lsocket
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { main(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccvcDI5c.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in cciA3fo2.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccusLK8g.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lnsl... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lnsl -lz -lm  -lpthread -ldl -lobjc "
+ld: library not found for -lnsl
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lnsl -lz -lm  -lpthread -ldl -lobjc "
+ld: library not found for -lnsl
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { main(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccIqCNVI.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccZjolmM.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lz -lm  -lruby.1.9.1-static -lmysqlclient -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccQq1UZk.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lmygcc... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lz -lm  -lruby.1.9.1-static -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmygcc.a, file was built for archive which is not the architecture being linked (x86_64)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for mysql_query() in -lmysqlclient... -------------------- no
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmygcc.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccNJ0vjt.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: ignoring file /usr/local/mysql/lib/libmygcc.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccMIQ3Ua.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘mysql_query’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))mysql_query; return 0; }
+/* end */
+
+"/usr/bin/gcc-4.2 -o conftest -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/x86_64-darwin11.1.0 -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/Users/hank/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -Imysql-ruby-2.8.2 -I/usr/local/mysql/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -fno-common -pipe conftest.c  -L. -L/Users/hank/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/local/mysql/lib -L/usr/local/mysql/lib/mysql -L.     -lmygcc -lz -lm  -lruby.1.9.1-static -lmysqlclient -lmygcc -lz -lm  -lpthread -ldl -lobjc "
+ld: warning: directory not found for option '-L/usr/local/mysql/lib/mysql'
+ld: warning: ignoring file /usr/local/mysql/lib/libmygcc.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libz.a, file was built for archive which is not the architecture being linked (x86_64)
+ld: warning: ignoring file /usr/local/mysql/lib/libmysqlclient.dylib, file was built for unsupported file format which is not the architecture being linked (x86_64)
+Undefined symbols for architecture x86_64:
+  "_mysql_query", referenced from:
+      _t in ccvbrJTW.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { mysql_query(); return 0; }
+/* end */
+
+--------------------
+

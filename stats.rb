@@ -12,12 +12,12 @@ rank = []
 arr = CSV.read("Data-Table_1.csv", :headers => :first_row)
 arr.each do |row|
   #comment out the if block if you want to do regression for all investment types
-  if row[1] == "IE"
+  #if row[1] == "0"
     nav << row[2].to_f
     y << row[3].to_f
     er << row[4].to_f
     rank << row [5].to_f
-  end
+  #end
 end
 
 #create vectors
@@ -28,10 +28,12 @@ er = er.to_scale
 rank = rank.to_scale
 
 #create dataset 
-ds = { 'nav'=>nav, 'y'=>y, 'er'=>er, 'rank'=>rank}.to_dataset
-lr=Statsample::Regression.multiple(ds, 'y')
+ds = { 'nav'=>nav, 'y'=>y, 'er'=>er}.to_dataset
+lr=Statsample::Regression.logit(ds, 'y')
 
 #give it a name
-lr.name = "Investment Equity"
-file = File.open("report", "a+" )
-file.puts(lr.summary)
+lr.name = "expense ratio to return"
+file = File.open("report-simple", "a+")
+puts(lr.summary)
+
+

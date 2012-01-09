@@ -1,0 +1,17 @@
+{
+  "name": "NS video viewer",
+  "version": "1.0",
+  "icons": { 
+    "16": "icon16.png", 
+    "48": "icon48.png",
+    "128": "icon128.jpg"
+  },
+  "description": "view NS videos the way we want them",
+  "homepage_url":"http://newschoolers.com",
+  "permissions":["http://www.newschoolers.com/*"],
+  "content_scripts":[
+    {"matches": ["http://www.newschoolers.com"],
+     "js": ["content.js", "jquery.js"]
+    }
+  ]
+}
