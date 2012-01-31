@@ -53,6 +53,12 @@
 			<key>name</key>
 			<string>NShack</string>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>nshack/cat_file_maker.rb</string>
+			<key>lastUsed</key>
+			<date>2012-01-13T07:26:06Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
@@ -80,6 +86,20 @@
 				<integer>9</integer>
 				<key>line</key>
 				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>nshack/cat_file_maker.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -168,7 +188,21 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+		<key>ocw/ps4.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>50</integer>
+				<key>line</key>
+				<integer>39</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>20</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -177,6 +211,8 @@
 		<string>ocw/ps1.rb</string>
 		<string>ocw/ps2.rb</string>
 		<string>ocw/ps3.rb</string>
+		<string>nshack/cat_file_maker.rb</string>
+		<string>ocw/ps4.rb</string>
 		<string>nshack/jquery.js</string>
 		<string>nshack/content.js</string>
 		<string>nshack/manifest.json</string>
@@ -184,6 +220,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{494, 58}, {640, 720}}</string>
+	<string>{{640, 58}, {640, 720}}</string>
 </dict>
 </plist>
