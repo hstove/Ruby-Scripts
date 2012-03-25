@@ -8,7 +8,7 @@ def summarize
   @primes.each do |p|
     sum += Math.log(p)
   end
-  #puts "for number #{@primes.last} sum of logs is #{sum} with ratio #{sum/@primes.last}"
+  puts "for number #{@primes.last} sum of logs is #{sum} with ratio #{sum/@primes.last}"
 end
 
 def is_prime? n
@@ -32,6 +32,6 @@ until @primes.length == 1000 do
 end
 
 summarize
-puts @primes.last.to_s + "is the 1000th prime number."
+puts @primes.last.to_s + " is the 1000th prime number."
     
       

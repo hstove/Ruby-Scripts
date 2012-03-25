@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script>
+  var options = {
+      chart: {
+          renderTo: 'container',
+          defaultSeriesType: 'column'
+      },
+      title: {
+          text: 'Fruit Consumption'
+      },
+      xAxis: {
+          categories: []
+      },
+      yAxis: {
+          title: {
+              text: 'Units'
+          }
+      },
+      series: {
+        name: 'Price New',
+        data: []
+      }
+  };
+
+  $.get('http://shopobot.com/admin/csv-export?p=144', function(data){
+    var lines = data.split('\n');
+    series = []
+    var oldNode;
+    $.each(lines, function(lineKey, line){
+      var items = line.split(',');
+      //console.log(items);
+      oldNode = items[1];
+      var plot = []
+      plot.push(items[0]);
+      plot.push(items[1]);
+      options.series.data.push(plot);
+    });
+    console.log(options.series.data)
+  });
+  var chart = new Highcharts.Chart(options);
+
+  </script>
+</head>  
+<body>
+
+  <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+  </body>
