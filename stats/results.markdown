@@ -6,7 +6,7 @@ Moreover, it does not appear that net asset value is a very strong indicator of 
 
 
 Appendix
-I did all of my statistical analysis in the ruby programming language, as I have excel for mac and couldn’t find any working extensions. My code can be found at https://github.com/hstove/Ruby-Scripts/blob/master/stats.rb and I used the ruby StatSample regression module.
+I did all of my statistical analysis in the ruby programming language, as I have excel for mac and couldn’t find any working extensions. My code can be found at https://github.com/hstove/Ruby-Scripts/blob/master/stats/stats.rb and I used the ruby StatSample regression module.
 
 ~~~
 The multiple regression model for all funds
