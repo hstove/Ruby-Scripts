@@ -1,0 +1,2 @@
+# Statistics assignment
+This is the code I used to run my statistics analysis for a class. The ruby code is available [here](http://github.com/hstove/ruby-scripts/blob/master/stats/stats.rb). My resulting analysis is available [here](http://github.com/hstove/ruby-scripts/blob/master/stats/results.txt).
